@@ -14,5 +14,6 @@ class Submarine
 private:
 	int depth;
 	int horizontalPosition;
+	int aim;
 };
 

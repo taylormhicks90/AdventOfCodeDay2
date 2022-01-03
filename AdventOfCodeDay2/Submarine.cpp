@@ -5,21 +5,23 @@ Submarine::Submarine()
 {
 	this->depth = 0;
 	this->horizontalPosition = 0;
+	this->aim = 0;
 }
 
 void Submarine::up(int y)
 {
-	this->depth -= y;
+	this->aim -= y;
 }
 
 void Submarine::down(int y)
 {
-	this->depth += y;
+	this->aim += y;
 }
 
 void Submarine::forward(int x)
 {
 	this->horizontalPosition += x;
+	this->depth += this->aim * x;
 }
 
 void Submarine::parseCommand(std::string rawCommand)

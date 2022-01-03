@@ -25,9 +25,12 @@ int main()
     std::cout << "Depth: " << sub.getDepth() << std::endl;
     std::cout << "Horizontal Position: " << sub.getHorizontalPosition() << std::endl;
     std::cout << "Product: " << sub.getDepthPositionProduct() << std::endl << std::endl;
-    std::cout << "Provide Input To Exit" << std::endl;
+    std::cout << "Enter 'e' To Exit" << std::endl;
     std::string input;
-    std::cin >> input;
+    do {
+        std::cin >> input;
+    } while (input != "e");
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
